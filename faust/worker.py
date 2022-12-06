@@ -229,6 +229,7 @@ class Worker(mode.Worker):
         loop: Optional[asyncio.AbstractEventLoop] = None,
         redirect_stdouts: Optional[bool] = None,
         redirect_stdouts_level: Optional[Severity] = None,
+        override_logging: Optional[bool] = True,
         logging_config: Optional[Dict] = None,
         **kwargs: Any,
     ) -> None:
@@ -255,6 +256,7 @@ class Worker(mode.Worker):
             console_port=console_port,
             redirect_stdouts=redirect_stdouts,
             redirect_stdouts_level=redirect_stdouts_level,
+            override_logging=override_logging,
             logging_config=logging_config,
             loop=loop,
             **kwargs,

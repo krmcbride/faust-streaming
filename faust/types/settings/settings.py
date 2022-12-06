@@ -118,6 +118,7 @@ class Settings(base.SettingsRegistry):
         key_serializer: CodecArg = None,
         value_serializer: CodecArg = None,
         # Logging settings:
+        override_logging: Optional[bool] = True,
         logging_config: Mapping = None,
         loghandlers: List[logging.Handler] = None,
         # Producer settings:
